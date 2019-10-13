@@ -10,8 +10,6 @@ class HomeScreen extends StatefulWidget {
 class HomeScreenState extends State<HomeScreen>
     with SingleTickerProviderStateMixin {
   TabController _tabController;
-  bool showFab = true;
-  final formKey = GlobalKey<FormState>();
 
   @override
   void initState() {
@@ -19,12 +17,6 @@ class HomeScreenState extends State<HomeScreen>
 
     _tabController = TabController(vsync: this, initialIndex: 1, length: 2);
     _tabController.addListener(() {
-      if (_tabController.index == 1) {
-        showFab = true;
-      } else {
-        showFab = false;
-      }
-      setState(() {});
     });
   }
 

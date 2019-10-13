@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 
 class AddRecord extends StatelessWidget {
-  AddRecord({Key key, this.title}) : super(key: key);
-  final String title;
   final formKey = GlobalKey<FormState>();
   String name, symptoms;
 
