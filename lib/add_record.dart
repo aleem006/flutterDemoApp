@@ -4,6 +4,8 @@ import 'person_data.dart';
 class AddRecord extends StatelessWidget {
   final formKey = GlobalKey<FormState>();
   PersonData personData = new PersonData();
+  // List<PersonData> personData = new List<PersonData>(); 
+  // var personData = new PersonData(); 
 
   @override
   Widget build(BuildContext context) {
@@ -49,9 +51,16 @@ class AddRecord extends StatelessWidget {
 
   void _submit(){
     if(formKey.currentState.validate()){
+
+      List<PersonData> dummyData = [
+          new PersonData(
+             name: personData.getName,
+             symptoms: personData.getSymptoms),
+      ];
       formKey.currentState.save();
       print(personData.getName);
       print(personData.getSymptoms);
     }
   }
+
 }

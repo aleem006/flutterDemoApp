@@ -1,5 +1,6 @@
-import 'package:flutter/material.dart';
 import 'package:demo/person_data.dart';
+import 'package:flutter/material.dart';
+import 'package:demo/add_record.dart';
 
 class RecordsScreen extends StatefulWidget {
   @override
@@ -7,6 +8,7 @@ class RecordsScreen extends StatefulWidget {
 }
 
 class _RecordsScreenState extends State<RecordsScreen> {
+  // List<PersonData> dummyData = new List<PersonData>(); 
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
