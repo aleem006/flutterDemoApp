@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'person_data.dart';
 
 class AddRecord extends StatelessWidget {
   final formKey = GlobalKey<FormState>();
-  String name, symptoms;
+  PersonData personData = new PersonData();
 
   @override
   Widget build(BuildContext context) {
@@ -18,15 +19,15 @@ class AddRecord extends StatelessWidget {
                     decoration: InputDecoration(
                         labelText: 'Name:'
                     ),
-                    onSaved: (input) => name = input,
+                    onSaved: (input) => personData.setName = input,
                   ),
                   TextFormField(
                     decoration: InputDecoration(
                         labelText: 'Symtoms:'
                     ),
-                    onSaved: (input) => symptoms = input,
-                    obscureText: true,
+                    onSaved: (input) => personData.setSymptoms = input,
                   ),
+
                   Row(
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: <Widget>[
@@ -43,15 +44,14 @@ class AddRecord extends StatelessWidget {
               ),
             ),
           ),
-        // )
         );
   }
 
   void _submit(){
     if(formKey.currentState.validate()){
       formKey.currentState.save();
-      print(name);
-      print(symptoms);
+      print(personData.getName);
+      print(personData.getSymptoms);
     }
   }
 }
