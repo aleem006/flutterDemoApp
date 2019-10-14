@@ -10,4 +10,4 @@ A few resources that i used to make this Flutter project:
 
 
 
-![](images/add_record.jpg)
+![](images/add_record.jpg) ![](images/record_list.png)
